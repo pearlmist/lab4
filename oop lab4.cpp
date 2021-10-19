@@ -10,8 +10,16 @@ int main()
     int M;
     cout << "Введите количество столбиков матрицы: ";
     cin >> M;
+    if (std::cin.fail()) {
+        std::cout << "Неверное число M\n";
+        return 0;
+    }
     cout << "Введите количество строк матрицы: ";
     cin >> N;
+    if (std::cin.fail()) {
+        std::cout << "Неверное число N\n";
+        return 0;
+    }
 
     //создание матрицы
     unique_ptr<char* []> arr(new char* [N]);
