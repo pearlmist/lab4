@@ -10,13 +10,13 @@ int main()
     int M;
     cout << "Введите количество столбиков матрицы: ";
     cin >> M;
-    if (std::cin.fail()) {
+    if ((std::cin.fail()) or (M < 1)) {
         std::cout << "Неверное число M\n";
         return 0;
     }
     cout << "Введите количество строк матрицы: ";
     cin >> N;
-    if (std::cin.fail()) {
+    if ((std::cin.fail()) or (N < 1)) {
         std::cout << "Неверное число N\n";
         return 0;
     }
